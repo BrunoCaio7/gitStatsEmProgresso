@@ -1,0 +1,43 @@
+mat-card{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    
+    
+   
+    
+   
+   
+   
+}
+
+.img{
+    
+    border-radius: 50%;
+    
+}
+
+body{
+    background: black;
+}
+
+mat-form-field {
+    
+    width: 50%;
+    text-align: center;
+    
+}
+
+mat-card button {
+   /*  border-radius: 50px; */
+    background-color: orangered;
+    width: 50%;
+    color: black;
+}
+
+mat-label {
+    color:black;
+}
