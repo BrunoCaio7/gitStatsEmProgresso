@@ -4,6 +4,80 @@
     box-sizing: border-box;
     font-family: "roboto" , sans-serif;
   }
+
+  
+
+   .containerP {
+    display: flex;
+  } 
+
+   .content {
+    background: #8f9a9c;
+    width: 100%;
+  } 
+
+   .card {
+    background: #bec3bc; 
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin:0 20px ;
+    height: 132px;
+
+    
+  } 
+  .card .card-content {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+
+  }
+  .card .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  .cards-header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card-small {
+    width: 240px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-large {
+    width: 464px;
+  }
+
+  .card-info {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .card-info p {
+    font-size: 16px;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-large .card-container .card-content:first-child {
+    border-right: 1px solid #111;
+  }
+  
+
+
   .lateral-menu {
   /*   background:rgb(114, 113, 113); */
     width: 250px;
@@ -16,6 +90,8 @@
     font-weight: bold;
     background: #373737;
   }
+
+ 
 
   .imagem {
     max-width:200px;
@@ -42,4 +118,31 @@
   .lateral-menu ul li  img{
     margin-bottom: 10px;
   }
+
+ /*  .card2 mat-card {
+    
+   
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      word-break: break-all;
+
+      background-color:black;
+      border: 3px;
+      padding: 15px;
+      grid-template-columns: auto auto auto;
+      height: 50vh;
+    } */
+     /*  display: grid; */
+     
+      /* justify-content: center;
+      align-items: center; */
+ 
+  
+ 
+  
+ 
+  
+
   
