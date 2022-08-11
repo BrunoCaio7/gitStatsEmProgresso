@@ -1,0 +1,22 @@
+.nav {
+    background: black;
+    color: #373737;
+    height: 100px;
+   /*  transition: all .3s ease; */
+
+   /* &__item {
+    &--link{
+        color: #ffffff;
+        &:hover {
+           color:rgba(13, 233, 68, 0.589) ; 
+        }
+    }
+   }
+ */
+   
+    
+
+   
+
+    
+}

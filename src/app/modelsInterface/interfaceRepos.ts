@@ -1,6 +1,6 @@
 export interface interfaceRepos{
 
-    html_url:string
-    repos:string
+    /* html_url:string */
+    repos_url:string
     
 }

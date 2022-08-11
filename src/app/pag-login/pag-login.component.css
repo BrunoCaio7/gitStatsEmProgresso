@@ -1,0 +1,62 @@
+mat-card{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+
+    
+     
+   
+}
+
+#ghLogo{
+    width: 40px;
+    height: 40px;
+  }
+
+.img{
+    
+    border-radius: 50%;
+    
+}
+
+/* body{
+    background: black;
+} */
+
+mat-form-field {
+    
+    width: 50%;
+    text-align: center;
+    
+}
+
+mat-card button {
+   /*  border-radius: 50px; */
+    background-color: orangered;
+    width: 50%;
+    color: black;
+}
+
+mat-label {
+    color:black;
+}
+
+.container {
+    background-color:black;
+    border: 3px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container mat-card-content {
+    background-color:darkgreen;
+    padding: 20px;
+    border: 1px solid yellow;
+}

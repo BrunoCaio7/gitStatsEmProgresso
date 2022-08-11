@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto" , sans-serif;
+  }
+  .lateral-menu {
+  /*   background:rgb(114, 113, 113); */
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: #373737;
+  }
+
+  .imagem {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    
+    
+  }
+  .imagemLogo {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto; 
+  }
+
+  .lateral-menu ul li {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 15px 0;
+  }
+
+  .lateral-menu ul li  img{
+    margin-bottom: 10px;
+  }
+  
