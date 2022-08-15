@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorPageComponent } from './errorPage/error-page.component';
 
 const routes: Routes = [
@@ -12,14 +13,18 @@ const routes: Routes = [
     pathMatch:'full',
     redirectTo:'consumo'
   },
+ 
   {
-    path:'dashboard',
-    loadChildren: () => import('./dashboard/dashboard-router/dashboard-router.module').then((m) => m.DashboardRouterModule)
+    path:'dashboard/:usuario',
+    component:DashboardComponent
+    
   },
-  {
+  /* {
     path: '**',
     component:ErrorPageComponent
-  }
+  } ,
+   */
+   
    
   
   

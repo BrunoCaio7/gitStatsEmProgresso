@@ -1,10 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Interface } from '../modelsInterface/interface';
 import { interfaceRepos } from '../modelsInterface/interfaceRepos';
 import { ApiService } from '../services/api.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +14,9 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  /* @Input() informacao!:String; */
+  /* colunas: Array<string> = ['id','repositorios','email',] */
+
   repositorios : any
   public apiValues$!: Observable<Interface>;
   public apiRepos$!: Observable<interfaceRepos>;
@@ -19,6 +24,10 @@ export class DashboardComponent implements OnInit {
   interfaceRepos!: interfaceRepos; 
    cardValues:boolean = false 
 
+   
+   
+
+  
   id:number = 0
   login:string = ''
   followers:number = 0
@@ -29,12 +38,19 @@ export class DashboardComponent implements OnInit {
   email:string = ''
   repos_url:string = '' 
  
+ 
 
-  constructor(private apiService: ApiService,
-    private snackBar: MatSnackBar) {}
+  constructor(private apiService: ApiService, 
+    private snackBar: MatSnackBar,private route: ActivatedRoute,) {}
+    
 
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(
+      (params) => {
+        let username=(params.get('usuario') ?? '0')
+        this.dataUsers(username)
+      })
   }
    dataUsers(userName: string) {
     this.apiService.dataUser(userName).subscribe((a) => {
@@ -48,6 +64,7 @@ export class DashboardComponent implements OnInit {
      this.blog = a.blog
      this.email = a.email 
       this.cardValues = true  
+    
        console.log(a);
     },
     (error:HttpErrorResponse) => {
@@ -63,8 +80,9 @@ export class DashboardComponent implements OnInit {
    /*    this.repos_url = a.repos_url */
        this.repositorios = rep 
       
-     
+       
       this.cardValues = true 
+
    })
    
   } 

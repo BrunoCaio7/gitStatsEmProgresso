@@ -2,6 +2,7 @@
     background: black;
     color: #373737;
     height: 100px;
+
    /*  transition: all .3s ease; */
 
    /* &__item {
@@ -13,10 +14,10 @@
     }
    }
  */
-   
-    
+       
+}
 
-   
-
+.direito {
     
+  left: 92%
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApiComponent } from 'src/app/components/api/api.component';
 import { PagLoginComponent } from 'src/app/pag-login/pag-login.component';
+import { ErrorPageComponent } from '../errorPage/error-page.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     pathMatch:'full',
     component:PagLoginComponent
   },
+ 
   
   
 ];
