@@ -17,6 +17,9 @@ import { PagLoginComponent } from './pag-login/pag-login.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorPageComponent } from './errorPage/error-page.component';
+import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DialogMenuLateralComponent } from './dialog-menu-lateral/dialog-menu-lateral.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { ErrorPageComponent } from './errorPage/error-page.component';
     ApiComponent,
     PagLoginComponent,
     DashboardComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    LogoutDialogComponent,
+    NavbarComponent,
+    DialogMenuLateralComponent
   ],
   imports: [
     BrowserModule,

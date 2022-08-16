@@ -5,8 +5,8 @@ export interface Interface {
     following:number
     public_repos:number
     image:string
-    blog:string
-    email:string
+   /*  blog:string
+    email:string */
     avatar_url:string
 
 

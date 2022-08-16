@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit ,Input} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -17,31 +18,36 @@ export class DashboardComponent implements OnInit {
   /* @Input() informacao!:String; */
   /* colunas: Array<string> = ['id','repositorios','email',] */
 
-  repositorios : any
-  public apiValues$!: Observable<Interface>;
+  repositorios!: interfaceRepos[]
+  dataUser!: Interface
+
+  
+ /*  public apiValues$!: Observable<Interface>;
   public apiRepos$!: Observable<interfaceRepos>;
   interfaceValue!: Interface;
-  interfaceRepos!: interfaceRepos; 
+  interfaceRepos!: interfaceRepos;  */
    cardValues:boolean = false 
 
    
    
 
   
-  id:number = 0
+ /*  id:number = 0
   login:string = ''
   followers:number = 0
   following:number = 0
   public_repos:number = 0
   image:string = ''
-  blog:string = ''
-  email:string = ''
-  repos_url:string = '' 
+   blog:string = ''
+  email:string = ''  */
+  
+
+  /* language:string[] = [] */
  
  
 
   constructor(private apiService: ApiService, 
-    private snackBar: MatSnackBar,private route: ActivatedRoute,) {}
+    private snackBar: MatSnackBar,private route: ActivatedRoute,private dialog:MatDialog,) {}
     
 
 
@@ -52,40 +58,29 @@ export class DashboardComponent implements OnInit {
         this.dataUsers(username)
       })
   }
-   dataUsers(userName: string) {
+  dataUsers(userName: string) {
     this.apiService.dataUser(userName).subscribe((a) => {
-      
-     this.id = a.id
-     this.login = a.login
-     this.followers = a.followers
-     this.following = a.following
-     this.public_repos = a.public_repos
-     this.image = a.avatar_url
-     this.blog = a.blog
-     this.email = a.email 
-      this.cardValues = true  
-    
-       console.log(a);
-    },
-    (error:HttpErrorResponse) => {
-      if(error.status == 404){
-        this.snackBar.open("Usuário não encontrado", "Ok",{
-          verticalPosition:'top',
-          duration:3000
-        })
-      }
-    });
-    this.apiService.reposUser(userName).subscribe((rep) => { 
-     /*  this.html_url = a.html_url */
-   /*    this.repos_url = a.repos_url */
-       this.repositorios = rep 
-      
-       
-      this.cardValues = true 
 
-   })
-   
-  } 
+      this.dataUser = a
+
+    },
+      (error: HttpErrorResponse) => {
+        if (error.status == 404) {
+          this.snackBar.open("Usuário não encontrado", "Ok", {
+            verticalPosition: 'top',
+            duration: 3000
+          })
+        }
+      });
+    this.apiService.reposUser(userName).subscribe((rep) => {
+
+      this.repositorios = rep
+
+      this.cardValues = true
+
+    })
+
+  }
 
    /* reposUser(userRepo: string) {
     this.apiService.reposUser(userRepo).subscribe((a) => {
@@ -94,16 +89,9 @@ export class DashboardComponent implements OnInit {
      
       this.cardValues = true
   })
-
-
-
   }  */
 
-  /* repUser():void {
-    this.apiService.repUser().subscribe((x) => (this.commits_url = this.commits_url));
-
-  } */
-
+ 
 }
 
   

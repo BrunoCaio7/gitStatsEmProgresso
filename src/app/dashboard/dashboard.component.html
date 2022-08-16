@@ -1,12 +1,5 @@
-
-
-<body>
+<app-navbar></app-navbar>
   
-
-
-  <!-- <h1>{{informacao}}</h1> -->
-<!--   <mat-card *ngIf="cardValues" class="example-card"> -->
-
   <!--  <mat-card-title-group>
     <mat-card-title>Github</mat-card-title>
     <mat-card-subtitle>GitHub</mat-card-subtitle> 
@@ -17,14 +10,16 @@
     <div class="containerP">
 
       <div class="lateral-menu">
-        <img class="img" mat-card-xl-image [src]="image" >
+        <img class="img" mat-card-xl-image [src]="dataUser.avatar_url" >
+        <br>
+        
         <!-- <img class="imagem" src="assets/github jpg.png" /> -->
-        <p></p> {{login}}
+        <h2>{{dataUser.login}}</h2> 
         <div class="menu-itens">
           <ul>
             <li>
               <img class="imagemLogo" src="../../../assets/iconmonstr-github-1.svg" /> 
-              <!-- <img class="imagemLogo" src="../../../assets/iconmonstr-github-1.svg" />  -->
+              
                 <p>xxx</p>
                 
             </li>
@@ -45,8 +40,8 @@
         <div class="card card-small">
           <div class="card-content">
             <div class="card-info">
-              <span>Id of User:</span> {{id}}
-             <!--  <h2>12</h2> -->
+              <span>Id of User:</span> {{dataUser.id}}
+           
             </div>
             <img src="../../assets/iconmonstr-github-1.svg">
           </div>
@@ -56,8 +51,8 @@
           <div class="card-container">
           <div class="card-content">
             <div class="card-info">
-              <p>Followers:</p>{{followers}}
-              <!-- <h2>25</h2> -->
+              <p>Followers:</p>{{dataUser.followers}}
+           
             </div>
             <img  src="../../assets/iconmonstr-github-1.svg">
           </div>
@@ -66,8 +61,8 @@
         
           <div class="card-content">
             <div class="card-info">
-              <p>Following:</p>{{following}}
-              <!-- <h2>45</h2> -->
+              <p>Following:</p>{{dataUser.following}}
+             
             </div>
             <img  src="../../assets/iconmonstr-github-1.svg">
           </div>
@@ -78,8 +73,8 @@
         <div class="card card-small">
           <div class="card-content">
             <div class="card-info">
-              <p>Public Repositories:</p>{{public_repos}}
-             <!--  <h2>55</h2> -->
+              <p>Public Repositories:</p>{{dataUser.public_repos}}
+           
             </div>
             <img  src="../../assets/iconmonstr-github-1.svg">
           </div>
@@ -92,23 +87,20 @@
         <table>
           <thead>
             <tr>
-              <th>Repositório</th>
+              <th>Repository / Language</th>
               
           </thead>
           <tbody>
             <tr>
               <td> <mat-card-content *ngFor="let item of repositorios">
-                <span>Repos:</span> {{item.full_name}} 
-              </mat-card-content>    </td>  
+                <span>Name: {{item.name}} - Language: {{item.language}}</span> 
+                <p></p>
+                <br>
+              </mat-card-content>
+            </td>  
             </tr>
-           
-            
-           
           </tbody>
         </table>
-    
-          
-    
       </div>
     </main>
 
@@ -116,29 +108,6 @@
       </div>
     </div>
   <!-- </mat-card> -->
-
-
-    <!-- <div class="container2">
-    <mat-card *ngIf="cardValues" class="example-card">
-     
-      <mat-card-title-group>
-        <mat-card-title>Github</mat-card-title>
-        <mat-card-subtitle>GitHub</mat-card-subtitle>
-        <img id="ghLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" >
-        <img class="img" mat-card-xl-image [src]="image" >
-      </mat-card-title-group>
-      
-
-
-      <div class="container">
-      <mat-card-content>
-       <span>Id of User:</span> {{id}}
-      </mat-card-content> -->
-
-     
-
-    
-      
   
       <!-- <mat-card-content>
           <span>Blog:</span> {{blog}}
@@ -150,16 +119,12 @@
   
      <!--  <mat-card-content>
         <span>html_url:</span> {{html_url}}
+
     </mat-card-content> -->
 
-   <!--  <mat-card-content *ngFor="let item of repositorios">
-      <span>Repos:</span> {{item.full_name}} 
-    </mat-card-content> 
-      -->
    
- <!--  </div>
-</mat-card> 
-  </div>  -->
+   
+ 
 
-  </body>
-   <!-- <img class="imagemLogo" src="../../../assets/gits.png" /> -->
+
+ 
