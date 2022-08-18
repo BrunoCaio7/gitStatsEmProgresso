@@ -1,7 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Router, RouterLink } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 
 
@@ -13,7 +15,7 @@ import { Router, RouterLink } from '@angular/router';
 export class PagLoginComponent implements OnInit {
 
  
-  constructor(private snackBar: MatSnackBar,private router:Router) {}
+  constructor(private snackBar: MatSnackBar,private router:Router,apiservice:ApiService) {}
 
   ngOnInit(): void {}
 
@@ -23,5 +25,12 @@ export class PagLoginComponent implements OnInit {
  
   dashboard(usuario:string){
     this.router.navigateByUrl(`dashboard/${usuario}`)
-    }
+    } 
+   
+  
+    
+  
+   
+    
+  
 }

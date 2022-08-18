@@ -6,6 +6,7 @@
     justify-content: center;
     word-break: break-all;
     height: 100%;
+    /* background-color: #1a1b27; */
     
 } 
 #ghLogo {
@@ -14,10 +15,9 @@
 }
 
 
-
-
  .buscar {
     display:contents;
+   
 } 
 
 mat-form-field {
@@ -27,7 +27,8 @@ text-align: center;
 
 mat-card button {
 border-radius: 50px;
-background-color: rgb(224, 191, 178);
+background-color:gray;
+/* background-color: rgb(224, 191, 178); */
 width: 40%;
 color: black;
      
@@ -36,6 +37,12 @@ mat-label {
     color:black;
 
 }
+
+
+mat-card button:hover {
+background-color:#5e5e5e ;
+color: white;
+  }
 
 
 

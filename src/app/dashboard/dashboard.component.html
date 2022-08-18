@@ -1,12 +1,5 @@
 <app-navbar></app-navbar>
   
-  <!--  <mat-card-title-group>
-    <mat-card-title>Github</mat-card-title>
-    <mat-card-subtitle>GitHub</mat-card-subtitle> 
-    <img id="ghLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" >
-    <img class="img" mat-card-xl-image [src]="image" >
-  </mat-card-title-group> 
- -->
     <div class="containerP">
 
       <div class="lateral-menu">
@@ -15,21 +8,23 @@
         
         <!-- <img class="imagem" src="assets/github jpg.png" /> -->
         <h2>{{dataUser.login}}</h2> 
+        <br>
+        <br>
+        
         <div class="menu-itens">
           <ul>
             <li>
-              <img class="imagemLogo" src="../../../assets/iconmonstr-github-1.svg" /> 
-              
-                <p>xxx</p>
-                
+             <a  href="https://github.com/{{dataUser.login}}" target ="_blank"><img
+              class="imagemLogo" src="../../assets/icons8-link-externo.svg" /></a> 
+              <!-- <span>user profile</span> -->
             </li>
             <li>
-                <img class="imagemLogo" src="../../../assets/iconmonstr-github-1.svg" /> 
-                <p>xxx</p>
+             <!--  <img class="imagemLogo" src="../../assets/gitBranco.svg" /> -->
+                <p></p>
             </li>
             <li>
-                <img class="imagemLogo" src="../../../assets/iconmonstr-github-1.svg" /> 
-                <p>xxx</p>
+                 <img class="imagemLogo" src="../../assets/gitBranco.svg" />
+                <p></p>
             </li>
           </ul>
         </div>
@@ -43,7 +38,7 @@
               <span>Id of User:</span> {{dataUser.id}}
            
             </div>
-            <img src="../../assets/iconmonstr-github-1.svg">
+            <img src="../../assets/icons8-ok.svg">
           </div>
         </div>
 
@@ -54,7 +49,7 @@
               <p>Followers:</p>{{dataUser.followers}}
            
             </div>
-            <img  src="../../assets/iconmonstr-github-1.svg">
+            <img src="../../assets/icons8-myspace.svg">
           </div>
        
 
@@ -64,7 +59,7 @@
               <p>Following:</p>{{dataUser.following}}
              
             </div>
-            <img  src="../../assets/iconmonstr-github-1.svg">
+            <img src="../../assets/icons8-myspace.svg">
           </div>
         </div>
         </div>
@@ -76,24 +71,38 @@
               <p>Public Repositories:</p>{{dataUser.public_repos}}
            
             </div>
-            <img  src="../../assets/iconmonstr-github-1.svg">
+            <img src="../../assets/icons8-notícias.svg">
           </div>
         </div>
       </div>
 
-<main>
+      <div class="separador1">
+        <p></p>
+      </div>
 
-      <div class="table">
+<main>
+  
+  <div class="gitStats">
+    <!--   <img src="https://github-readme-stats.vercel.app/api/?username={{dataUser.login}}" alt="">  --> 
+       <img src="https://github-readme-stats.vercel.app/api?username={{dataUser.login}}&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="">
+
+       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={{dataUser.login}}&layout=compact&langs_count=6&theme=tokyonight" alt="">
+     </div>
+     <div class="separador">
+      <p></p>
+     </div>
+
+       <div class="table">
         <table>
           <thead>
             <tr>
-              <th>Repository / Language</th>
+              <th class="t">Repository / Language</th>
               
           </thead>
           <tbody>
             <tr>
-              <td> <mat-card-content *ngFor="let item of repositorios">
-                <span>Name: {{item.name}} - Language: {{item.language}}</span> 
+              <td > <mat-card-content *ngFor="let item of repositorios">
+                <span class="l">Name: {{item.name}} - Language: {{item.language}}</span> 
                 <p></p>
                 <br>
               </mat-card-content>
@@ -102,6 +111,9 @@
           </tbody>
         </table>
       </div>
+      
+      
+     
     </main>
 
       

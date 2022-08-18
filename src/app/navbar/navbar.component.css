@@ -1,23 +1,27 @@
-.nav {
-    background: #5e5e5e;
-    color: black;
-    height: 100px;
-
-   /*  transition: all .3s ease; */
-
-   /* &__item {
-    &--link{
-        color: #ffffff;
-        &:hover {
-           color:rgba(13, 233, 68, 0.589) ; 
-        }
-    }
-   }
- */
-       
+.nav{
+    background:  #1d1f31;
+    /* background: #1a1b27; */
+    color: rgb(124, 112, 112);;
+    height: 72px;
+    
 }
 
+img {
+  bottom: 15%;
+ 
+}
+
+
 .direito {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    left: 94%;
+    top:-20%;
     
-  left: 92%
+}
+
+button:hover {
+  color:  #29b692;
+  cursor:pointer;
 }
